@@ -8,7 +8,6 @@
     
     <link rel="stylesheet" href="./plugins&headline/headline.css">
     <link rel="stylesheet" href="./plugins&headline/magnify.css">
- <link rel="stylesheet" href="./mailphp/mail.php">
     <link rel="stylesheet" href="./css/style.css">
     <title>Dicu Cristian</title>
 </head>
@@ -321,22 +320,23 @@
                     </div>
                 </div>
                 <div class="right">
-                    <form action="./mailphp/mail.php">
+                    <form action="./mailphp/mail.php" method="post">
                         <div class="form__group">
                             <div>
                                 <label for="">Name</label>
-                                <input type="text" placeholder="Your Name">
+                                <input type="text" name="name" placeholder="Your Name">
                             </div>
                             <div>
                                 <label for="">Email</label>
-                                <input type="email" placeholder="yourmail@mail.com">
+                                <input type="email" name="emailaddress" placeholder="yourmail@mail.com">
                             </div>
                         </div>
 
                         <div class="form__group textarea__wrapper">
                             <div>
                                 <label for="">Message</label>
-                                <textarea name="" id="" cols="30" rows="4" placeholder="Write me a message"></textarea>
+                                
+                                <textarea type="text" name="message" id="" cols="30" rows="4" placeholder="Write me a message"></textarea>
                             </div>
                         </div>
                         <button type="submit">Submit Now</button>

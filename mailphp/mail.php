@@ -1,12 +1,16 @@
 <?php
-    // The message
-    $name = $_GET["text"];
-    $email = $_GET["email"];
-    $message = $_GET["message"];
-    $full_message = $name + '\n\r' + $email + '\n\r' + $message;
-    $subject = 'Someone just emailed you from your own site';
-    // Send
-    mail('dicucristian24@gmail.com', $subject, $full_message);
-  ?>
-
-  Your mail has been sent.
+//get data from form  
+$name = $_POST['name'];
+$email= $_POST['emailaddress'];
+$message= $_POST['message'];
+$to = "dicucristian24@gmail.com";
+$subject = "Mail From website";
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+$headers = "From: noreply@yoursite.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+if($email!=NULL){
+    mail($to,$subject,$txt,$headers);
+}
+//redirect
+header("Location:thankyou.html");
+?>
